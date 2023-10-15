@@ -1,0 +1,137 @@
+:root {
+    --color-background: white;
+    --color-accent: rgb(238, 238, 238);
+    --color-navbar: rgba(224, 0, 73, 1.0);
+    
+    --color-text: black;
+    --color-link: white;
+    --color-link-hover: lightgray;
+
+    --font-family: system-ui;
+
+    --flex-gap: 15px;
+    --grid-gap: 15px;
+}
+
+.center-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body > .container {
+    background: var(--color-background);
+    min-height: 100vh;
+}
+
+.grid-vertical-to-horizontal {
+    display: grid;
+    gap: var(--grid-gap);
+}
+
+.grid-vertical {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-rows: min-content;
+}
+
+.flex {
+    display: flex;
+    gap: var(--flex-gap);
+}
+
+.flex-align-bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--flex-gap);
+}
+
+.flex-space-between {
+    display: flex;
+    gap: var(--flex-gap);
+    justify-content: space-between;
+}
+
+.flex-space-around {
+    display: flex;
+    gap: var(--flex-gap);
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 1000px) {
+    .grid-vertical-to-horizontal {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+h1 {
+    color: white;
+}
+
+h2,
+h3,
+p {
+    color: var(--color-text);
+}
+
+body {
+    background-color: var(--color-accent);
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+a {
+    color: var(--color-link);
+}
+
+a:hover {
+    color: var(--color-link-hover)
+}
+
+section {
+    padding-top: 10px;
+}
+
+table form, table .buttons {
+    display: inline-block;
+}
+
+.card {
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid gray;
+}
+
+#login {
+    display: grid;
+    max-width: 400px;
+    min-width: 200px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+}
+
+#login label {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#login input {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#login button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}

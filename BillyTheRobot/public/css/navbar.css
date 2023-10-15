@@ -1,0 +1,12 @@
+.navbar {
+    background-color: var(--color-navbar);
+}
+
+.navbar .container div {
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+    align-items: center;
+    justify-content: right;
+    flex-wrap: wrap;
+}
